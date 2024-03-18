@@ -1,18 +1,14 @@
 package ch06.problem.no20;
 
 public class Account {
-
-	// account 마다 다른 계좌, 이름, 금액이기 때문에 static안됨.
 	private String ano;
+	private String owner;
 	private int balance;
-	private String AccountUser;
 
-	// 생성자(초기화)
-	public Account(String ano, int balance, String AccountUser) {
+	public Account(String ano, String owner, int balance) {
 		this.ano = ano;
+		this.owner = owner;
 		this.balance = balance;
-		this.AccountUser = AccountUser;
-
 	}
 
 	public String getAno() {
@@ -23,20 +19,19 @@ public class Account {
 		this.ano = ano;
 	}
 
-	public static int getBalance() {
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public int getBalance() {
 		return balance;
 	}
 
-	public static void setBalance(int balance) {
-		Account.balance = balance;
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
-
-	public static String getAccountUser() {
-		return AccountUser;
-	}
-
-	public static void setAccountUser(String accountUser) {
-		AccountUser = accountUser;
-	}
-
 }
