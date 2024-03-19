@@ -7,4 +7,7 @@ public class Bus extends Vehicle {
 		System.out.println("버스가 달립니다.");
 	}
 
+	public void bell() {
+		System.out.println("벨을 누릅니다.");
+	}
 }
