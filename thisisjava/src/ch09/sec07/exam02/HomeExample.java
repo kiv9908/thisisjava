@@ -1,5 +1,7 @@
 package ch09.sec07.exam02;
 
+import pack1.A;
+
 public class HomeExample {
 	public static void main(String[] args) {
 		// Home 객체 생성
@@ -24,5 +26,9 @@ public class HomeExample {
 				System.out.println("난방을 끕니다.");
 			}
 		});
+
+		A a = new A();
+		a.method();
+
 	}
 }
