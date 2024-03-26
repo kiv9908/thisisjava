@@ -18,33 +18,37 @@ public class ArrayListExample {
 		list.add(new Board("제목4", "내용4", "글쓴이4"));
 		list.add(new Board("제목5", "내용5", "글쓴이5"));
 
-		// 저장된 총 객체 수 얻기
-		int size = list.size();
-		System.out.println("총 객체 수 : " + size);
-		System.out.println();
+//		// 저장된 총 객체 수 얻기
+//		int size = list.size();
+//		System.out.println("총 객체 수 : " + size);
+//		System.out.println();
 
 		// 특정 인덱스의 객체 가져오기
 		Board board = list.get(2);
-		System.out.println(board.getSubject() + "\t" + board.getContent() + "\t" + board.getWriter());
-		System.out.println();
+		ch14.sec06.exam01.Calculator cal = new ch14.sec06.exam01.Calculator();
+		cal.setMemory2(100);
 
-		// 모든 객체를 하나씩 가져오기
+		board.setCal(cal);
+		System.out.println(
+				board.getSubject() + "\t" + board.getContent() + "\t" + board.getWriter() + "\t" + board.getCal());
 
-		for (int i = 0; i < list.size(); i++) {
-			Board b = list.get(i);
-			System.out.println(b.getSubject() + "\t" + board.getContent() + "\t" + b.getWriter());
-			System.out.println();
-		}
-
-		// 객체 삭제
-
-		list.remove(2);
-		list.remove(2);
-
-		// 향상된 for문으로 모든 객체를 하나씩 가져오기
-		// 출력하는건 이게 더 편함
-		for (Board b : list) {
-			System.out.println(b.getSubject() + "\t" + b.getContent() + "\t" + b.getWriter());
-		}
+//		// 모든 객체를 하나씩 가져오기
+//
+//		for (int i = 0; i < list.size(); i++) {
+//			Board b = list.get(i);
+//			System.out.println(b.getSubject() + "\t" + board.getContent() + "\t" + b.getWriter());
+//			System.out.println();
+//		}
+//
+//		// 객체 삭제
+//
+//		list.remove(2);
+//		list.remove(2);
+//
+//		// 향상된 for문으로 모든 객체를 하나씩 가져오기
+//		// 출력하는건 이게 더 편함
+//		for (Board b : list) {
+//			System.out.println(b.getSubject() + "\t" + b.getContent() + "\t" + b.getWriter());
+//		}
 	}
 }
