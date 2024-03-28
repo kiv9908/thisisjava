@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NaverAPI {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		String clientId = "xWZaf0ytFmY8pTHww8IH"; // 애플리케이션 클라이언트 아이디
 		String clientSecret = "TiUbKIfI29"; // 애플리케이션 클라이언트 시크릿
 
@@ -33,7 +33,17 @@ public class NaverAPI {
 		requestHeaders.put("X-Naver-Client-Secret", clientSecret);
 		String responseBody = get(apiURL, requestHeaders);
 
+		// 콘솔에 출력
 		System.out.println(responseBody);
+
+//		// responBody에 들어있는 문자열 json에 저장
+//		String json = responseBody.toString();
+//
+//		// 파일로 저장
+//		Writer writer = new FileWriter("D:/naver.json", Charset.forName("UTF-8"));
+//		writer.write(json);
+//		writer.flush();
+//		writer.close();
 	}
 
 	private static String get(String apiUrl, Map<String, String> requestHeaders) {
