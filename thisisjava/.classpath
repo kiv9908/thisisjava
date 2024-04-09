@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="lib" path="D:/java/lombok-1.18.30.jar"/>
 	<classpathentry kind="lib" path="D:/java/json-20240303.jar"/>
+	<classpathentry kind="lib" path="D:/java/ojdbc11-23.3.0.23.09.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
